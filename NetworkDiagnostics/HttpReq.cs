@@ -88,8 +88,8 @@ namespace NetworkDiagnostics
         }
 
         private const string HttpHeaderAccept = "*/*";
-        private const string HttpHeaderOrigin = "https://live.bilibili.com";
-        private const string HttpHeaderReferer = "https://live.bilibili.com/";
+        // private const string HttpHeaderOrigin = "https://live.bilibili.com";
+        // private const string HttpHeaderReferer = "https://live.bilibili.com/";
         private const string HttpHeaderUserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36";
 
         private static HttpClient CreateHttpClient()
@@ -100,8 +100,8 @@ namespace NetworkDiagnostics
             });
             var headers = httpClient.DefaultRequestHeaders;
             headers.Add("Accept", HttpHeaderAccept);
-            headers.Add("Origin", HttpHeaderOrigin);
-            headers.Add("Referer", HttpHeaderReferer);
+            // headers.Add("Origin", HttpHeaderOrigin);
+            // headers.Add("Referer", HttpHeaderReferer);
             headers.Add("User-Agent", HttpHeaderUserAgent);
             return httpClient;
         }
